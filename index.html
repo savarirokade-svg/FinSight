@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FinSight | Credit Risk Intelligence</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <h2>FinSight.</h2>
+
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/predict">Prediction</a>
+            <a href="/analytics">Analytics</a>
+            <a href="/models">Models</a>
+        </div>
+    </nav>
+
+    <main class="container">
+
+        <!-- Hero Section -->
+        <section class="welcome">
+
+            <p class="tag">FINANCIAL INTELLIGENCE PLATFORM</p>
+
+            <h1>
+                Understand Credit Risk.<br>
+                Make Smarter Insights.
+            </h1>
+
+            <p>
+                An intelligent machine learning platform for
+                credit default prediction, financial analytics
+                and model performance evaluation.
+            </p>
+
+            <a href="#features" class="btn">
+                Explore Platform →
+            </a>
+
+        </section>
+
+        <!-- Project Statistics -->
+        <section class="features">
+
+            <div class="card">
+                <h3>30,000</h3>
+                <h2>Customer Records</h2>
+                <p>Financial records used for model development.</p>
+            </div>
+
+            <div class="card">
+                <h3>04</h3>
+                <h2>ML Algorithms</h2>
+                <p>Four machine learning models evaluated.</p>
+            </div>
+
+            <div class="card">
+                <h3>77.76%</h3>
+                <h2>Best ROC-AUC</h2>
+                <p>Gradient Boosting test-set ROC-AUC.</p>
+            </div>
+
+        </section>
+
+        <!-- Platform Features -->
+        <section id="features" style="margin-top: 60px;">
+
+            <div class="welcome">
+                <p class="tag">EXPLORE FINSIGHT</p>
+                <h2>Platform Features</h2>
+                <p>
+                    Explore the different tools available
+                    in the FinSight platform.
+                </p>
+            </div>
+
+            <div class="features">
+
+                <a href="/predict" class="card">
+                    <h3>01</h3>
+                    <h2>Credit Prediction</h2>
+                    <p>
+                        Predict potential credit default risk
+                        using the trained Gradient Boosting model.
+                    </p>
+                    <span>Explore Prediction →</span>
+                </a>
+
+                <a href="/analytics" class="card">
+                    <h3>02</h3>
+                    <h2>Financial Analytics</h2>
+                    <p>
+                        Explore customer payment patterns,
+                        credit limits and financial insights.
+                    </p>
+                    <span>Explore Analytics →</span>
+                </a>
+
+                <a href="/models" class="card">
+                    <h3>03</h3>
+                    <h2>Model Intelligence</h2>
+                    <p>
+                        Compare Random Forest, XGBoost,
+                        SVM and Gradient Boosting.
+                    </p>
+                    <span>Compare Models →</span>
+                </a>
+
+            </div>
+
+        </section>
+
+        <!-- Disclaimer -->
+        <section class="model-note" style="margin-top: 40px;">
+            <p>
+                <strong>Disclaimer:</strong>
+                FinSight is an educational machine learning
+                project. Its predictions are model estimates
+                and are not actual credit approval decisions.
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        FinSight &copy; 2026 | Educational ML Project
+    </footer>
+
+</body>
+</html>

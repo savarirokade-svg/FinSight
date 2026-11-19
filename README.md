@@ -1,48 +1,50 @@
+<<<<<<< HEAD
+
 # FinSight – Credit Default Prediction & Financial Analytics Platform
 
-An intelligent Machine Learning platform that predicts credit default risk using customer financial information and multiple classification algorithms.
+FinSight is a machine learning-based financial analytics platform that predicts credit default risk and provides interactive insights into customer financial behaviour.
 
-## About the Project
+## Project Overview
 
-FinSight is a Machine Learning-based financial analytics platform designed to predict whether a credit card customer is likely to default on their payment next month.
+This project uses historical credit card customer data to train and evaluate machine learning models for predicting whether a customer may default on their next payment.
 
-The system analyzes customer information, payment history, credit limits, and bill amounts to generate predictions and support financial risk analysis.
+It also provides an interactive web application built using Flask and Plotly.
 
-## Objectives
+## Key Features
 
-- Predict customer credit default risk.
-- Analyze customer financial information.
-- Compare different Machine Learning algorithms.
-- Evaluate model performance using classification metrics.
-- Provide an interactive platform for financial analysis.
+- Credit default prediction using Machine Learning.
+- Interactive financial analytics dashboard.
+- Comparison of four ML algorithms.
+- Model performance evaluation.
+- Customer-level prediction form.
+- Interactive data visualizations.
 
-## Machine Learning Algorithms
+## Machine Learning Models
 
-This project uses four Machine Learning algorithms:
+Four algorithms were trained and evaluated:
 
-1. **Random Forest** – Combines multiple decision trees using majority voting.
-2. **XGBoost** – Uses optimized gradient boosting to improve predictions.
-3. **Support Vector Machine (SVM)** – Separates customer categories using an optimal hyperplane.
-4. **Gradient Boosting** – Builds sequential models to reduce prediction errors.
+1. Random Forest
+2. XGBoost
+3. Support Vector Machine (SVM)
+4. Gradient Boosting
+
+## Model Performance
+
+| Model | Accuracy | Precision | Recall | F1 Score | ROC-AUC |
+|---|---:|---:|---:|---:|---:|
+| Random Forest | 0.8142 | 0.6497 | 0.3466 | 0.4521 | 0.7626 |
+| XGBoost | 0.7658 | 0.4771 | 0.6134 | 0.5368 | 0.7771 |
+| SVM | 0.6835 | 0.3724 | 0.6292 | 0.4679 | 0.7096 |
+| Gradient Boosting | 0.7673 | 0.4796 | 0.6127 | 0.5381 | 0.7776 |
+
+**Best F1 Score:** Gradient Boosting – 0.5381
 
 ## Dataset
 
-**Dataset:** Default of Credit Card Clients
-
-The dataset contains 30,000 customer records with information such as:
-
-- Customer age
-- Credit limit
-- Education
-- Marital status
-- Repayment status
-- Bill amount
-- Previous payment amount
-
-**Target Variable:** Default Payment Next Month
-
-- `0` – No Default
-- `1` – Default
+- Dataset: Default of Credit Card Clients
+- Total records: 30,000
+- Input features: 23 original features
+- Target: Default payment next month
 
 ## Technologies Used
 
@@ -51,95 +53,85 @@ The dataset contains 30,000 customer records with information such as:
 - NumPy
 - Scikit-learn
 - XGBoost
+- Flask
+- Plotly
+- HTML
+- CSS
 - Matplotlib
 - Seaborn
-- Streamlit
-
-## Project Workflow
-
-1. Data Collection
-2. Data Preprocessing
-3. Exploratory Data Analysis (EDA)
-4. Feature Selection
-5. Model Training
-6. Model Evaluation
-7. Credit Default Prediction
-8. Financial Analytics and Visualization
-
-## Model Evaluation Metrics
-
-- Accuracy
-- Precision
-- Recall
-- F1-Score
-- Confusion Matrix
-- ROC-AUC Score
-
-## Installation
-
-Clone the repository:
-
-```bash
-git clone https://github.com/savarirokade-svg/FinSight.git
-```
-
-Navigate to the project folder:
-
-```bash
-cd FinSight
-```
-
-Install dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
-## Run the Project
-
-```bash
-streamlit run app.py
-```
 
 ## Project Structure
 
 ```text
 FinSight/
 │
-├── app/
-│   ├── dataset/
-│   └── application files
-│
-├── notebooks/
-├── models/
-├── reports/
+├── app.py
 ├── requirements.txt
-├── README.md
-└── .gitignore
+├── .gitignore
+│
+├── dataset/
+├── models/
+├── notebooks/
+├── reports/
+├── templates/
+└── static/
+    └── css/
 ```
 
-*Note: Adjust the structure above to match the actual folders and filenames in your repository.*
+## How to Run the Project
 
-## Future Enhancements
+### 1. Clone the repository
 
-- Real-time credit risk prediction.
-- Improved model optimization.
-- Advanced financial analytics.
-- Explainable AI for prediction transparency.
-- Multilingual user interface.
+```bash
+git clone YOUR_GITHUB_REPOSITORY_URL
+```
 
-## Project Information
+### 2. Open the project folder
 
-**Project Name:** FinSight
+```bash
+cd FinSight
+```
 
-**Domain:** Machine Learning | Financial Analytics
+### 3. Create a virtual environment
 
-**Project Type:** Academic Machine Learning Project
+```bash
+python -m venv venv
+```
 
-**Developed By:** Savari Prafull Rokade
+### 4. Activate the environment (Windows)
 
-**GitHub:** https://github.com/savarirokade-svg/FinSight
+```bash
+venv\Scripts\activate
+```
 
----
+### 5. Install dependencies
 
-⭐ If you find this project interesting, feel free to explore the repository.
+```bash
+pip install -r requirements.txt
+```
+
+### 6. Run the application
+
+```bash
+python app.py
+```
+
+### 7. Open in your browser
+
+```text
+http://127.0.0.1:5000/
+```
+
+## Future Improvements
+
+- Deploy the application online.
+- Add more financial risk indicators.
+- Improve model performance and probability calibration.
+- Add downloadable analytics reports.
+
+## Disclaimer
+
+FinSight is an educational machine learning project. Predictions are model estimates and should not be used as actual credit approval decisions.
+=======
+# FinSight
+>>>>>>> aa97275f7b870367dafa22fef4c90041bff0e682

@@ -1,0 +1,208 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FinSight | Model Intelligence</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='css/style.css') }}">
+
+    <style>
+        .model-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .model-heading {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .best-model {
+            background: #e8f5e9;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .model-chart {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            overflow-x: auto;
+        }
+
+        .model-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+        }
+
+        .model-table th,
+        .model-table td {
+            padding: 13px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .model-table th {
+            background: #172554;
+            color: white;
+        }
+
+        .model-table tr:hover {
+            background: #f1f5f9;
+        }
+
+        .model-note {
+            margin-top: 25px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 700px) {
+            .model-table {
+                font-size: 12px;
+            }
+
+            .model-table th,
+            .model-table td {
+                padding: 8px 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<nav class="navbar">
+    <h2>FinSight.</h2>
+    <span>Model Intelligence</span>
+</nav>
+
+<main class="model-container">
+
+    <section class="model-heading">
+        <p class="tag">MACHINE LEARNING ANALYTICS</p>
+        <h1>Model Intelligence</h1>
+        <p>
+            Compare machine learning models and evaluate
+            their performance in predicting credit default.
+        </p>
+    </section>
+
+    <!-- Best Model Summary -->
+    <section class="best-model">
+        <h2>Best Performing Model</h2>
+
+        <h1>{{ best_model }}</h1>
+
+        <p>
+            Best F1 Score:
+            <strong>{{ best_f1 }}</strong>
+        </p>
+
+        <p>
+            Selected based on the highest F1 Score
+            among the evaluated models.
+        </p>
+    </section>
+
+    <!-- Performance Charts -->
+    <section>
+        <h2>Performance Visualizations</h2>
+
+        {% for chart in charts %}
+            <div class="model-chart">
+                {{ chart | safe }}
+            </div>
+        {% endfor %}
+    </section>
+
+    <!-- Model Comparison Table -->
+    <section class="model-chart">
+
+        <h2>Detailed Model Comparison</h2>
+
+        <table class="model-table">
+
+            <thead>
+                <tr>
+                    <th>Model</th>
+                    <th>Accuracy</th>
+                    <th>Precision</th>
+                    <th>Recall</th>
+                    <th>F1 Score</th>
+                    <th>ROC-AUC</th>
+                    <th>PR-AUC</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                {% for model in models %}
+                <tr>
+                    <td>{{ model["Model"] }}</td>
+
+                    <td>{{ "%.4f"|format(model["Accuracy"]) }}</td>
+
+                    <td>{{ "%.4f"|format(model["Precision"]) }}</td>
+
+                    <td>{{ "%.4f"|format(model["Recall"]) }}</td>
+
+                    <td>{{ "%.4f"|format(model["F1 Score"]) }}</td>
+
+                    <td>{{ "%.4f"|format(model["ROC-AUC"]) }}</td>
+
+                    <td>{{ "%.4f"|format(model["PR-AUC"]) }}</td>
+                </tr>
+                {% endfor %}
+
+            </tbody>
+        </table>
+
+    </section>
+
+    <section class="model-note">
+        <h3>Understanding the Results</h3>
+
+        <p>
+            Accuracy measures the overall proportion of correct
+            predictions. Precision measures how many predicted
+            defaults were actually defaults. Recall measures how
+            many actual defaults were identified.
+        </p>
+
+        <p>
+            F1 Score balances precision and recall.
+            ROC-AUC measures the model's ability to distinguish
+            between the two classes, while PR-AUC focuses on
+            precision and recall.
+        </p>
+
+        <p>
+            These results are based on the project's test dataset.
+            They are educational model evaluations and should not
+            be used as real-world credit approval decisions.
+        </p>
+    </section>
+
+    <p>
+        <a href="/">&#8592; Back to Home</a>
+    </p>
+
+</main>
+
+<footer>
+    FinSight &copy; 2026 | Educational ML Project
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,252 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fc;
+    color: #172554;
+}
+
+.navbar {
+    background: #101d3a;
+    color: white;
+    padding: 22px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar h2 {
+    font-size: 27px;
+    color: #60a5fa;
+}
+
+.navbar span {
+    color: #cbd5e1;
+    font-size: 14px;
+}
+
+.container {
+    padding: 50px 8%;
+}
+
+.welcome {
+    background: linear-gradient(120deg, #101d3a, #1e40af);
+    color: white;
+    padding: 65px 50px;
+    border-radius: 18px;
+}
+
+.tag {
+    color: #93c5fd;
+    letter-spacing: 2px;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.welcome h1 {
+    font-size: 42px;
+    line-height: 1.3;
+    margin-bottom: 18px;
+}
+
+.welcome p {
+    color: #dbeafe;
+    line-height: 1.7;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 13px 25px;
+    background: #60a5fa;
+    color: #101d3a;
+    text-decoration: none;
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top: 35px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.card h3 {
+    color: #2563eb;
+    margin-bottom: 18px;
+}
+
+.card h2 {
+    font-size: 19px;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #64748b;
+    line-height: 1.6;
+}
+
+footer {
+    text-align: center;
+    margin-top: 55px;
+    color: #64748b;
+    font-size: 13px;
+}
+
+@media (max-width: 768px) {
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .welcome h1 {
+        font-size: 30px;
+    }
+
+    .navbar span {
+        display: none;
+    }
+}
+
+.card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card span {
+    display: inline-block;
+    margin-top: 15px;
+    color: #168b83;
+    font-weight: bold;
+}
+
+form label {
+    display: block;
+    margin-top: 18px;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+form input,
+form select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    font-size: 15px;
+}
+
+form button {
+    border: none;
+    cursor: pointer;
+    margin-top: 25px;
+}
+
+.prediction-result {
+    background: white;
+    padding: 25px;
+    margin-top: 25px;
+    border-radius: 12px;
+    border-left: 5px solid #2563eb;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.prediction-result h3 {
+    color: #1d4ed8;
+    margin: 12px 0;
+}
+
+.prediction-result p {
+    margin-top: 10px;
+    color: #475569;
+}
+
+.prediction-error {
+    background: #fee2e2;
+    color: #991b1b;
+    padding: 18px;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+.disclaimer {
+    font-size: 13px;
+}
+
+/* Homepage navigation */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #2563eb;
+}
+
+/* Homepage hero */
+.welcome h1 {
+    line-height: 1.25;
+    margin: 15px 0;
+}
+
+/* Homepage statistics */
+.features .card h3 {
+    color: #2563eb;
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+/* Feature cards */
+.features a.card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.features a.card:hover {
+    transform: translateY(-6px);
+}
+
+/* Mobile navigation */
+@media (max-width: 700px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+}
